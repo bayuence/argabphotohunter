@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#111111" />
+<title>FourDigitalStudio | Form Pemesanan</title>
+<style>
+:root{--bg:#0c0d0f;--panel:#15171a;--panel2:#1c1f23;--gold:#d6b36a;--gold2:#f0d99e;--muted:#a7abb1;--white:#f7f7f5;--line:#30343a;--green:#8fc49b}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 85% 0%,#292319 0,transparent 30%),var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.55}
+.wrap{width:min(1040px,92%);margin:auto;padding:34px 0 60px}.hero{text-align:center;padding:26px 12px 34px}.logo{display:flex;align-items:center;justify-content:center;gap:13px;margin-bottom:16px}.mark{width:62px;height:62px;border:1.5px solid var(--gold);border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#27231a,#111);box-shadow:0 8px 28px #0008}.mark svg{width:42px;height:42px}.brand{text-align:left}.brand strong{display:block;letter-spacing:2px;font-size:19px}.brand span{font-size:10px;letter-spacing:2.7px;color:var(--gold2)}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase}.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.12;margin:10px 0;color:var(--white)}.hero p{max-width:650px;margin:0 auto;color:var(--muted)}
+.section-title{font-size:18px;margin:30px 0 14px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.service{background:linear-gradient(150deg,#1c1f23,#121416);border:1px solid var(--line);border-radius:16px;padding:18px 15px;text-align:left;cursor:pointer;transition:.2s;color:var(--white);min-height:164px}.service:hover,.service.active{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 10px 30px #0005}.service .ico{font-size:24px}.service h3{font-size:14px;margin:9px 0 3px}.price{font-size:18px;font-weight:800;color:var(--gold2)}.service small{display:block;color:var(--muted);font-size:11px;margin-top:7px}.hint{font-size:12px;color:var(--muted);margin:9px 2px 0}
+.card{margin-top:24px;background:rgba(21,23,26,.96);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,4vw,30px);box-shadow:0 20px 55px #0004}.card h2{margin:0 0 5px;font-size:21px}.sub{color:var(--muted);font-size:13px;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:12px;color:#d9dadd;font-weight:650}input,select,textarea{width:100%;background:#0e1012;border:1px solid #353a40;color:var(--white);border-radius:10px;padding:12px 13px;font:inherit;font-size:14px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #d6b36a1c}textarea{min-height:88px;resize:vertical}input::placeholder,textarea::placeholder{color:#737982}.divider{height:1px;background:var(--line);margin:23px 0}.conditional{display:none}.conditional.show{display:block}.section-label{font-size:13px;letter-spacing:1px;color:var(--gold2);margin:0 0 14px;text-transform:uppercase}.checkline{display:flex;align-items:flex-start;gap:9px;color:var(--muted);font-size:12px;margin:16px 0}.checkline input{width:auto;margin-top:3px;accent-color:var(--gold)}.submit{border:0;border-radius:12px;background:linear-gradient(110deg,#b9914d,#efd99e);color:#17130c;font-weight:800;padding:15px 20px;width:100%;font-size:15px;cursor:pointer}.submit:hover{filter:brightness(1.06)}.foot{text-align:center;color:#858b93;font-size:11px;margin-top:24px}.foot strong{color:var(--gold2);letter-spacing:1.4px}.notice{background:#211e17;border:1px solid #5c4a2b;color:#e8d9b8;padding:12px 14px;border-radius:10px;font-size:12px;margin-top:14px}
+@media(max-width:760px){.services{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.wrap{width:94%;padding-top:20px}.services{gap:8px}.service{padding:14px 12px;min-height:150px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand strong{font-size:16px}.mark{width:54px;height:54px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="logo">
+    <div class="mark" aria-label="Logo FourDigitalStudio">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M58 12H28V52H58V88" stroke="#E4C47E" stroke-width="9" stroke-linecap="square"/>
+        <path d="M18 52H78" stroke="#F4E4BD" stroke-width="8" stroke-linecap="round"/>
+        <path d="M76 18V86" stroke="#E4C47E" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="76" cy="18" r="5" fill="#F4E4BD"/>
+      </svg>
+    </div>
+    <div class="brand"><strong>FOUR DIGITAL STUDIO</strong><span>DESIGN • PHOTO • VIDEO</span></div>
+  </div>
+  <div class="eyebrow">Creative Service & Visual Production</div>
+  <h1>Wujudkan Ide,<br><span style="color:var(--gold2)">Ciptakan Karya.</span></h1>
+  <p>Selamat datang di FourDigitalStudio. Pilih layanan yang Anda butuhkan, lalu lengkapi formulir pemesanan di bawah ini. Tim kami siap membantu kebutuhan visual dan branding Anda.</p>
+</header>
+
+<h2 class="section-title">Pilih layanan yang ingin dipesan</h2>
+<div class="services" role="group" aria-label="Pilihan layanan">
+  <button class="service active" type="button" data-service="design"><span class="ico">🎨</span><h3>Graphic Design</h3><div class="price">Mulai Rp45.000</div><small>Poster, logo, feed, banner, dan lainnya</small></button>
+  <button class="service" type="button" data-service="photo"><span class="ico">📸</span><h3>Photography</h3><div class="price">Mulai Rp150.000</div><small>Acara, produk, personal, dan dokumentasi</small></button>
+  <button class="service" type="button" data-service="video"><span class="ico">🎥</span><h3>Videography</h3><div class="price">Mulai Rp200.000</div><small>Cinematic, after movie, promosi, dan lainnya</small></button>
+  <button class="service" type="button" data-service="umkm"><span class="ico">🛍️</span><h3>UMKM Bundling</h3><div class="price">Mulai Rp250.000</div><small>Paket materi visual untuk branding usaha</small></button>
+</div>
+<p class="hint">*Harga merupakan harga mulai. Biaya akhir menyesuaikan kebutuhan, jumlah, lokasi, durasi, dan tingkat kesulitan pekerjaan.</p>
+
+<form class="card" id="orderForm">
+  <h2>Formulir Pemesanan</h2>
+  <p class="sub">Mohon isi informasi berikut dengan lengkap agar kami dapat menyiapkan penawaran yang sesuai.</p>
+  <input type="hidden" id="serviceValue" value="Graphic Design" />
+  <div class="section-label">01 / Identitas pemesan</div>
+  <div class="grid">
+    <div class="field"><label for="name">Nama pemesan *</label><input id="name" required placeholder="Nama lengkap" /></div>
+    <div class="field"><label for="contact">Nomor WhatsApp *</label><input id="contact" required type="tel" placeholder="08xxxxxxxxxx" /></div>
+    <div class="field"><label for="business">Instansi / usaha / komunitas</label><input id="business" placeholder="Nama instansi (jika ada)" /></div>
+    <div class="field"><label for="social">Instagram (opsional)</label><input id="social" placeholder="@username" /></div>
+  </div>
+  <div class="divider"></div>
+  <div class="section-label">02 / Detail pesanan</div>
+  <div class="grid">
+    <div class="field"><label for="title">Nama atau judul pesanan *</label><input id="title" required placeholder="Contoh: Poster Grand Opening" /></div>
+    <div class="field"><label for="quantity">Jumlah pesanan</label><input id="quantity" placeholder="Contoh: 2 desain / 1 sesi" /></div>
+    <div class="field"><label for="budget">Budget yang disiapkan</label><input id="budget" placeholder="Contoh: Rp300.000" /></div>
+    <div class="field"><label for="deadline">Deadline / tanggal kebutuhan</label><input id="deadline" placeholder="Contoh: 30 November 2026" /></div>
+  </div>
+  <div class="divider"></div>
+  <div class="conditional show" id="designFields">
+    <div class="section-label">03 / Spesifikasi graphic design</div>
+    <div class="grid">
+      <div class="field"><label for="designType">Jenis desain</label><input id="designType" placeholder="Poster, logo, feed, banner, jersey, dll." /></div>
+      <div class="field"><label for="size">Ukuran desain</label><input id="size" placeholder="A4, 1080 × 1350 px, custom, dll." /></div>
+      <div class="field"><label for="orientation">Orientasi</label><select id="orientation"><option value="">Pilih orientasi</option><option>Portrait</option><option>Landscape</option><option>Square</option><option>Custom</option></select></div>
+      <div class="field"><label for="style">Tema / gaya desain</label><input id="style" placeholder="Minimalis, elegan, modern, sporty, dll." /></div>
+      <div class="field"><label for="mainColor">Warna utama</label><input id="mainColor" placeholder="Contoh: Hitam" /></div>
+      <div class="field"><label for="secondColor">Warna pendukung</label><input id="secondColor" placeholder="Contoh: Emas dan putih" /></div>
+      <div class="field full"><label for="elements">Elemen yang ingin ditambahkan</label><textarea id="elements" placeholder="Logo, foto, ikon, ilustrasi, QR Code, ornamen, watermark, dll."></textarea></div>
+      <div class="field full"><label for="copyText">Tulisan / informasi yang wajib dicantumkan</label><textarea id="copyText" placeholder="Judul, tanggal, lokasi, kontak, slogan, dan teks lainnya"></textarea></div>
+    </div>
+  </div>
+  <div class="conditional" id="photoFields">
+    <div class="section-label">03 / Kebutuhan photography</div>
+    <div class="grid">
+      <div class="field"><label for="photoType">Jenis fotografi</label><input id="photoType" placeholder="Acara, produk, personal, komunitas, dll." /></div>
+      <div class="field"><label for="photoDate">Tanggal dan waktu sesi</label><input id="photoDate" placeholder="Tanggal / jam" /></div>
+      <div class="field"><label for="photoLocation">Lokasi pemotretan</label><input id="photoLocation" placeholder="Alamat / nama tempat" /></div>
+      <div class="field"><label for="photoDuration">Durasi / kebutuhan sesi</label><input id="photoDuration" placeholder="Contoh: 2 jam" /></div>
+      <div class="field full"><label for="photoConcept">Konsep atau hasil foto yang diinginkan</label><textarea id="photoConcept" placeholder="Jelaskan suasana, gaya, jumlah orang/produk, dan kebutuhan khusus"></textarea></div>
+    </div>
+  </div>
+  <div class="conditional" id="videoFields">
+    <div class="section-label">03 / Kebutuhan videography</div>
+    <div class="grid">
+      <div class="field"><label for="videoType">Jenis video</label><input id="videoType" placeholder="Cinematic, after movie, promosi, profil, dll." /></div>
+      <div class="field"><label for="videoDate">Tanggal dan waktu produksi</label><input id="videoDate" placeholder="Tanggal / jam" /></div>
+      <div class="field"><label for="videoLocation">Lokasi produksi</label><input id="videoLocation" placeholder="Alamat / nama tempat" /></div>
+      <div class="field"><label for="videoDuration">Target durasi video</label><input id="videoDuration" placeholder="Contoh: 1 menit / 3 menit" /></div>
+      <div class="field full"><label for="videoConcept">Konsep / alur video</label><textarea id="videoConcept" placeholder="Jelaskan ide, suasana, referensi, musik, voice-over, dan kebutuhan khusus"></textarea></div>
+    </div>
+  </div>
+  <div class="conditional" id="umkmFields">
+    <div class="section-label">03 / Kebutuhan UMKM branding bundling</div>
+    <div class="grid">
+      <div class="field"><label for="brandName">Nama usaha / brand</label><input id="brandName" placeholder="Nama bisnis Anda" /></div>
+      <div class="field"><label for="businessType">Bidang usaha</label><input id="businessType" placeholder="Kuliner, fashion, jasa, dll." /></div>
+      <div class="field"><label for="products">Produk / layanan utama</label><input id="products" placeholder="Produk yang dijual" /></div>
+      <div class="field"><label for="brandColor">Warna identitas brand</label><input id="brandColor" placeholder="Jika sudah ada" /></div>
+      <div class="field full"><label for="bundleNeeds">Materi yang dibutuhkan</label><textarea id="bundleNeeds" placeholder="Contoh: desain feed Instagram, X-banner, banner gerobak, daftar menu, materi promosi, dll."></textarea></div>
+    </div>
+    <div class="notice">Paket bundling UMKM mulai Rp250.000. Rincian isi paket, jumlah desain, ukuran, dan biaya akhir akan dikonfirmasi setelah kebutuhan usaha diperiksa.</div>
+  </div>
+  <div class="divider"></div>
+  <div class="section-label">04 / File dan referensi pendukung</div>
+  <div class="grid">
+    <div class="field full"><label for="files">Daftar file yang akan dikirim</label><textarea id="files" placeholder="Logo (PNG/SVG/AI/CDR), foto, materi tulisan, font, referensi desain, atau file lainnya. File dapat dikirim langsung melalui WhatsApp."></textarea></div>
+    <div class="field full"><label for="reference">Link referensi (opsional)</label><input id="reference" placeholder="Link Google Drive / Pinterest / Instagram, jika ada" /></div>
+    <div class="field full"><label for="notes">Catatan atau permintaan khusus</label><textarea id="notes" placeholder="Tambahkan informasi lain yang perlu kami ketahui"></textarea></div>
+  </div>
+  <label class="checkline"><input type="checkbox" id="agree" required /> Saya memastikan informasi yang saya isi sudah benar dan bersedia melakukan konfirmasi detail serta harga sebelum pengerjaan dimulai.</label>
+  <button class="submit" type="submit">Kirim Formulir via WhatsApp ↗</button>
+  <div class="notice">Setelah tombol diklik, WhatsApp akan terbuka dengan rangkuman pesanan Anda. Silakan periksa kembali lalu tekan tombol kirim di WhatsApp.</div>
+</form>
+<footer class="foot"><strong>FOUR DIGITAL STUDIO</strong><br>YOUR IDEAS, OUR CREATIVITY.<br>Design • Photography • Videography</footer>
+</main>
+<script>
+const serviceNames={design:'Graphic Design',photo:'Photography',video:'Videography',umkm:'UMKM Branding Bundling'};
+const cards=[...document.querySelectorAll('.service')];
+const sections={design:document.getElementById('designFields'),photo:document.getElementById('photoFields'),video:document.getElementById('videoFields'),umkm:document.getElementById('umkmFields')};
+let selected='design';
+function chooseService(key){selected=key;document.getElementById('serviceValue').value=serviceNames[key];cards.forEach(c=>c.classList.toggle('active',c.dataset.service===key));Object.entries(sections).forEach(([k,el])=>el.classList.toggle('show',k===key));}
+cards.forEach(c=>c.addEventListener('click',()=>chooseService(c.dataset.service)));
+function val(id){const el=document.getElementById(id);return el?el.value.trim():''}
+document.getElementById('orderForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const phone='6283185827551';
+ const lines=[
+ '✨ *FORMULIR PEMESANAN FOUR DIGITAL STUDIO* ✨','',
+ '*LAYANAN DIPILIH*',serviceNames[selected],'',
+ '*01. IDENTITAS PEMESAN*',`Nama: ${val('name')}`,`WhatsApp: ${val('contact')}`,`Instansi/Usaha/Komunitas: ${val('business')||'-'}`,`Instagram: ${val('social')||'-'}`,'',
+ '*02. DETAIL PESANAN*',`Judul pesanan: ${val('title')}`,`Jumlah: ${val('quantity')||'-'}`,`Budget: ${val('budget')||'-'}`,`Deadline: ${val('deadline')||'-'}`,'',
+ '*03. SPESIFIKASI LAYANAN*'
+ ];
+ const fields={design:['Jenis desain','designType'],photo:['Jenis fotografi','photoType'],video:['Jenis video','videoType'],umkm:['Nama usaha/brand','brandName']};
+ const [label,id]=fields[selected];lines.push(`${label}: ${val(id)||'-'}`);
+ const ids={design:['Ukuran desain','size'],photo:['Tanggal dan waktu sesi','photoDate'],video:['Tanggal dan waktu produksi','videoDate'],umkm:['Bidang usaha','businessType']};
+ const [l2,i2]=ids[selected];lines.push(`${l2}: ${val(i2)||'-'}`);
+ const extra={design:[['Orientasi','orientation'],['Tema/gaya','style'],['Warna utama','mainColor'],['Warna pendukung','secondColor'],['Elemen tambahan','elements'],['Tulisan wajib','copyText']],photo:[['Lokasi','photoLocation'],['Durasi sesi','photoDuration'],['Konsep foto','photoConcept']],video:[['Lokasi','videoLocation'],['Target durasi','videoDuration'],['Konsep/alur video','videoConcept']],umkm:[['Produk/layanan','products'],['Warna identitas','brandColor'],['Materi bundling','bundleNeeds']]};
+ extra[selected].forEach(([l,i])=>lines.push(`${l}: ${val(i)||'-'}`));
+ lines.push('','*04. FILE & REFERENSI*',`File yang akan dikirim: ${val('files')||'-'}`,`Link referensi: ${val('reference')||'-'}`,`Catatan khusus: ${val('notes')||'-'}`,'','Mohon konfirmasi rincian pesanan dan harga. Terima kasih.');
+ if(phone.includes('X')){alert('Silakan ganti nomor WhatsApp placeholder di kode website terlebih dahulu dengan nomor FourDigitalStudio.');return;}
+ window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')),'_blank');
+});
+</script>
+</body>
+</html>
